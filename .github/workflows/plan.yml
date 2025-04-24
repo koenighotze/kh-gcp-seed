@@ -11,6 +11,7 @@ on:
 env:
   TF_LOG: ${{ secrets.TF_LOG || 'INFO' }}
   TF_VAR_gcp_resource_postfix: ${{ secrets.GCP_RESOURCE_POSTFIX }}
+  TF_VAR_platform_project_id: ${{ 'platform_' }}${{ secrets.GCP_RESOURCE_POSTFIX }}
   TF_IN_AUTOMATION: true
   TF_INPUT: false
 
