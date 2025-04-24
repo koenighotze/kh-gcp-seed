@@ -63,10 +63,8 @@ jobs:
       - name: Authenticating
         uses: google-github-actions/auth@v2.1.8
         with:
-          workload_identity_provider:
-          service_account: koenighotze-seed-sa@kh-gcp-seed-13bf3f03.iam.gserviceaccount.com
-          # workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_NAME }}
-          # service_account: ${{ secrets.SEED_SA_EMAIL_ADDRESS }}
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_NAME }}
+          service_account: ${{ secrets.SEED_SA_EMAIL_ADDRESS }}
       - name: Setting up GCP environment
         uses: google-github-actions/setup-gcloud@v2.1.4
       - name: Debug Environment Variables
