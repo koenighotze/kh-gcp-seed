@@ -1,6 +1,6 @@
 resource "google_service_account" "admin" {
   project      = var.project_id
-  account_id   = "platform-admin-sa"
+  account_id   = "${var.resource_prefix}-admin-sa"
   display_name = "Platform infrastructure admin"
   description  = "Admin service account for ${var.project_id}"
 }

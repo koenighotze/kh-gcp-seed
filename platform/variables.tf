@@ -3,3 +3,14 @@ variable "project_id" {
   type        = string
 }
 
+variable "resource_prefix" {
+  description = "The prefix for all resources"
+  type        = string
+  default     = "platform"
+}
+
+variable "location" {
+  description = "The location where the GCS bucket will be created"
+  type        = string
+  default     = "europe-west3"
+}
