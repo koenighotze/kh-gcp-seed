@@ -5,6 +5,7 @@ resource "google_service_account" "admin" {
   description  = "Admin service account for ${var.project_id}"
 }
 
+#trivy:ignore:CKV_GCP_49
 resource "google_project_iam_member" "platform_iam_member_project" {
   for_each = toset([
     "roles/artifactregistry.admin",

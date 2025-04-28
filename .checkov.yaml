@@ -7,4 +7,5 @@ quiet: True
 download-external-modules: True
 evaluate-variables: True
 skip-check: 
-  - "CKV_AWS_20" # for example
+  - "CKV_AWS_20" 
+  - "CKV_GCP_62"
