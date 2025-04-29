@@ -62,7 +62,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
       - name: Init
         run: terraform init -backend-config="bucket=${{ secrets.TERRAFORM_STATE_BUCKET }}"
-      - name: Plan
+      - name: Apply
         run: terraform apply -auto-approve -no-color
       - name: Show Terraform Output as Summary
         run: |
