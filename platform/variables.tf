@@ -12,5 +12,5 @@ variable "resource_prefix" {
 variable "location" {
   description = "The location where the GCS bucket will be created"
   type        = string
-  default     = "europe-west3"
+  default     = "EUROPE-WEST3"
 }
