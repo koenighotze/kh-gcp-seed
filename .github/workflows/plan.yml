@@ -8,6 +8,10 @@ on:
     tags-ignore: ["**"]
   workflow_dispatch:
 
+concurrency:
+  group: plan
+  cancel-in-progress: true
+
 env:
   TF_LOG: ${{ secrets.TF_LOG || 'INFO' }}
   TF_VAR_gcp_resource_postfix: ${{ secrets.GCP_RESOURCE_POSTFIX }}
