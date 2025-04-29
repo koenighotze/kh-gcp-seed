@@ -63,7 +63,7 @@ jobs:
       - name: Init
         run: terraform init -backend-config="bucket=${{ secrets.TERRAFORM_STATE_BUCKET }}"
       - name: Plan
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -no-color
       - name: Show Terraform Output as Summary
         run: |
           {
