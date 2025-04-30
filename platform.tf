@@ -1,4 +1,4 @@
 module "platform" {
-  source     = "./platform"
-  project_id = var.platform_project_id
+  source           = "./platform"
+  resource_postfix = var.gcp_resource_postfix
 }

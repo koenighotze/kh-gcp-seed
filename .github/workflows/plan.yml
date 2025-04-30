@@ -15,7 +15,6 @@ concurrency:
 env:
   TF_LOG: ${{ secrets.TF_LOG || 'INFO' }}
   TF_VAR_gcp_resource_postfix: ${{ secrets.GCP_RESOURCE_POSTFIX }}
-  TF_VAR_platform_project_id: ${{ 'platform-' }}${{ secrets.GCP_RESOURCE_POSTFIX }}
   TF_VAR_seed_sa_email_address: ${{secrets.SEED_SA_EMAIL_ADDRESS }}
   TF_IN_AUTOMATION: true
   TF_INPUT: false

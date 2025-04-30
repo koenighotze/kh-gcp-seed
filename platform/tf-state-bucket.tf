@@ -1,7 +1,7 @@
 #trivy:ignore:avd-gcp-0066,CKV_GCP_62
 resource "google_storage_bucket" "terraform_state" {
-  project       = var.project_id
-  name          = "${var.project_id}-tf-state"
+  project       = data.google_project.platform.project_id
+  name          = "${data.google_project.platform.project_id}-tf-state"
   location      = var.location
   force_destroy = false
 
