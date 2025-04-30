@@ -3,7 +3,7 @@ variable "region" {
   default = "europe-west3"
 }
 
-variable "platform_project_id" {
+variable "gcp_resource_postfix" {
   type        = string
-  description = "Id of the project where the platform resources will be deployed"
+  description = "The postfix id used for GCP resources"
 }
