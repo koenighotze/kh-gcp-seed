@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Run Checkov action
         id: checkov
-        uses: bridgecrewio/checkov-action@v12.2998.0
+        uses: bridgecrewio/checkov-action@v12.3049.0
 
   apply:
     runs-on: ubuntu-24.04
