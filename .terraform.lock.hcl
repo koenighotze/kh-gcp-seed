@@ -2,21 +2,21 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/google" {
-  version     = "7.3.0"
+  version     = "7.8.0"
   constraints = ">= 6.7.0"
   hashes = [
-    "h1:JnL0n0QEnNGhsZkzGqFb5mqW1dpZnweBftXjRKksPYs=",
-    "zh:135c90b063f15c090ce82d99887032e495bbe6388764b666148ae78a776c4621",
-    "zh:47bb8721c29556b3b42f7c2ed73f8fdfb214609599ba819eebbe9ae33aab0e07",
-    "zh:532d385f6381eaee111d96296fcd9da7cdefb31b2afc81e36f390bd6ea1c5e99",
-    "zh:5c96018f5b722d2871ae2cf21dab9b05ec722270facd2e62393bcf89dc34852d",
-    "zh:703caf0829c30e3d166f61a7af208388840b384be1ec440b0955584856d22e30",
-    "zh:80b965cbe057eea5205c8bfd81fce642de7425dab86482f91bef136b3c1faaff",
-    "zh:a18b8178124d5dcd8a69bb6fc37206838f03699f2443e803142b1e2fde6f55d1",
-    "zh:bdddc969d92f5ecafbf762179e2291169a7e24214a52ff263aaf872b5cceb582",
-    "zh:e30f79beaf07618131a717734a58f7b5626c1c53d6cc14887c7098add73e0ccb",
-    "zh:e95fe5ec32e9eeff1d56379c84bee3fac0a7f12ea1b90f34ff7d88d469f56c23",
+    "h1:k4JVsSmGDO5KAci2hHC4SDGeQl040TfAO9O9HESFcww=",
+    "zh:0c0bfb95d837f2ad7d323f190f5ba60276e587dff6b1f764c9a4f5632b3f7bda",
+    "zh:2319de8e28a4bbfb181c91de168be716e924b95395104cd6c25fffa582594973",
+    "zh:35979edb2f110146dcd7926321bfa4ea4a8b682c5f43b21cfe66fb7c40031741",
+    "zh:3d7d1cc8480b03da212fc09fa4d7396513b48c2d4a55325ea94f02fd4abb356c",
+    "zh:43798be0cb5a186088f31ec188dfb4bc5fad0ba40183096980d6685f0fac1352",
+    "zh:6477c351fbb7affe4bd09a6dee9d45a87b45f24a2a920cf41e6b700ca0624be6",
+    "zh:6ce2c205d12df7f9bd042e3f0e3e6e2b141c02a3b4dd4f4f665874ab34c3aeaf",
+    "zh:be99969d71e7fa3c207d6ecf08637c8abf14cd107f943e94749dfbdcf5fb6f1f",
+    "zh:d575566ac47cb1c81fc83ad3b707b6cf5b911c7b351c5c992490efde68e81198",
+    "zh:eb00f7185088f47432d270ff78c8ed7571b672e2d6c9cd2c7fbb1d70248f4ea0",
+    "zh:ebbaf7630c7cc696843f7a88ff4694dfe074d94871648c643f69f5898e7f6162",
     "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
-    "zh:fec21ae17d9d4e814d65ff377fbe1e2543636aaa3439a8a7a3447e7623044a4e",
   ]
 }
