@@ -1,7 +1,6 @@
 variable "resource_postfix" {
   description = "The postfix for all resources"
   type        = string
-  default     = "platform"
 }
 
 variable "location" {

@@ -1,7 +1,6 @@
 variable "resource_postfix" {
   description = "The postfix for all resources"
   type        = string
-  default     = "wheel-of-meeting"
 }
 
 variable "workload_identity_pool_id" {
