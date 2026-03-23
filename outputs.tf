@@ -8,3 +8,7 @@ output "platform_terraform_state_bucket_name" {
   description = "The name of the GCS bucket used for Terraform state"
 }
 
+output "aws_website_terraform_admin_service_account_email" {
+  description = "The email of the service account"
+  value       = module.aws_website_terraform.admin_service_account.email
+}
