@@ -1,17 +1,17 @@
 resource "github_actions_secret" "workload_identity_provider_name" {
-  repository      = local.repository_name
+  repository      = data.github_repository.repo
   secret_name     = "WORKLOAD_IDENTITY_PROVIDER_NAME"
   plaintext_value = var.workload_identity_provider_name
 }
 
 resource "github_actions_secret" "gcp_service_account" {
-  repository      = local.repository_name
+  repository      = data.github_repository.repo
   secret_name     = "GCP_SERVICE_ACCOUNT"
   plaintext_value = google_service_account.admin.email
 }
 
 resource "github_actions_secret" "tf_state_bucket" {
-  repository      = local.repository_name
+  repository      = data.github_repository.repo
   secret_name     = "TF_STATE_BUCKET"
   plaintext_value = var.terraform_state_bucket
 }
