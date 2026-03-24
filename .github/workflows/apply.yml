@@ -13,6 +13,7 @@ env:
   TF_VAR_seed_sa_email_address: ${{ secrets.SEED_SA_EMAIL_ADDRESS }}
   TF_VAR_workload_identity_provider_name: ${{ secrets.WORKLOAD_IDENTITY_POOL_PROVIDER_NAME }}
   TF_VAR_workload_identity_pool_id: ${{ secrets.WORKLOAD_IDENTITY_POOL_PROVIDER_ID }}
+  GITHUB_TOKEN: ${{ secrets.KH_GCP_SETUP_ADMIN_GITHUB_TOKEN }}
   TF_IN_AUTOMATION: true
   TF_INPUT: false
 
