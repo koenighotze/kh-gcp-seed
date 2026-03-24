@@ -15,3 +15,9 @@ resource "github_actions_secret" "tf_state_bucket" {
   secret_name     = "TF_STATE_BUCKET"
   plaintext_value = google_storage_bucket.terraform_state.name
 }
+
+resource "github_actions_secret" "gcp_project_id" {
+  repository      = local.repository_name
+  secret_name     = "GCP_PROJECT_ID"
+  plaintext_value = data.google_project.wheel_of_meeting.project_id
+}
