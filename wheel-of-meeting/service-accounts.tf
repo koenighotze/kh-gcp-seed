@@ -52,3 +52,9 @@ resource "google_service_account_iam_member" "workload_identity" {
   role               = each.value
   member             = "principalSet://iam.googleapis.com/${var.workload_identity_pool_id}/attribute.repository/koenighotze/wheel-of-meeting"
 }
+
+resource "google_storage_bucket_iam_member" "admin_tf_state" {
+  bucket = google_storage_bucket.terraform_state.name
+  role   = "roles/storage.objectAdmin"
+  member = google_service_account.admin.member
+}
