@@ -21,9 +21,10 @@ resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
     "roles/logging.logWriter",
     # run.developer (not run.admin): deploy/update services without managing IAM on them
     "roles/run.developer",
-    # artifactregistry.admin needed for Terraform to create the repository;
-    # day-to-day image pushes are performed by the Cloud Build SA, not this one
-    "roles/artifactregistry.admin",
+    # artifactregistry.repoAdmin allows Terraform to create/manage repositories
+    # without granting project-level AR IAM management (unlike artifactregistry.admin).
+    # Day-to-day image pushes are performed by the Cloud Build SA, not this one.
+    "roles/artifactregistry.repoAdmin",
     "roles/cloudbuild.builds.editor",
   ])
   project = data.google_project.wheel_of_meeting.project_id
