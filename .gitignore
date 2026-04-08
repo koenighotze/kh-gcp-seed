@@ -42,3 +42,5 @@ defaults.auto.tfvars
 .external_modules
 
 !.terraform.lock.hcl
+*.tmp
+update_checker_cache.pkl
