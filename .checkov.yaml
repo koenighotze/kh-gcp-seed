@@ -8,5 +8,6 @@ download-external-modules: True
 evaluate-variables: True
 skip-check:
   - "CKV_AWS_20"
+  - "CKV_GCP_49"  # cloudbuild.builds.editor includes iam.serviceAccounts.actAs; risk accepted, scoped SA impersonation handled via google_service_account_iam_member
   - "CKV_GCP_62"
   - "CKV_GIT_4"
