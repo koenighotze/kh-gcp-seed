@@ -9,6 +9,12 @@ resource "google_service_account" "admin" {
 resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
   for_each = toset([
     "roles/logging.logWriter",
+    "roles/run.admin",
+    "roles/artifactregistry.admin",
+    "roles/cloudbuild.builds.editor",
+    "roles/iam.serviceAccountUser",
+    "roles/compute.admin",
+    "roles/iap.admin",
   ])
   project = data.google_project.wheel_of_meeting.project_id
   role    = each.value
