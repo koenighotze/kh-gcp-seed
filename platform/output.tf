@@ -11,3 +11,8 @@ output "terraform_state_bucket_name" {
 output "platform_project_number" {
   value = data.google_project.platform.number
 }
+
+output "docker_registry_url" {
+  description = "The URL of the Artifact Registry Docker repository"
+  value       = "${lower(var.location)}-docker.pkg.dev/${data.google_project.platform.project_id}/${google_artifact_registry_repository.docker.repository_id}"
+}

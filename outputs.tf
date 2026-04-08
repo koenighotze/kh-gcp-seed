@@ -13,6 +13,11 @@ output "platform_project_number" {
   description = "The project number of the platform project"
 }
 
+output "platform_docker_registry_url" {
+  value       = module.platform.docker_registry_url
+  description = "The URL of the Artifact Registry Docker repository for private projects"
+}
+
 output "go_playground_admin_service_account_email" {
   description = "The email of the service account"
   value       = module.go_playground.admin_service_account.email
