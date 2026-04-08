@@ -14,3 +14,9 @@ variable "reader_service_accounts" {
   type        = list(string)
   default     = []
 }
+
+variable "writer_service_accounts" {
+  description = "List of service account emails granted write access to the Docker registry (e.g. Cloud Build SAs)"
+  type        = list(string)
+  default     = []
+}

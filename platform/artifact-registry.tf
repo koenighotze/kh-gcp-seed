@@ -38,3 +38,13 @@ resource "google_artifact_registry_repository_iam_member" "reader" {
   role       = "roles/artifactregistry.reader"
   member     = "serviceAccount:${each.value}"
 }
+
+resource "google_artifact_registry_repository_iam_member" "writer" {
+  for_each = toset(var.writer_service_accounts)
+
+  project    = data.google_project.platform.project_id
+  location   = google_artifact_registry_repository.docker.location
+  repository = google_artifact_registry_repository.docker.name
+  role       = "roles/artifactregistry.writer"
+  member     = "serviceAccount:${each.value}"
+}
