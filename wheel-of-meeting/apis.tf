@@ -3,8 +3,6 @@ resource "google_project_service" "apis" {
     "run.googleapis.com",
     "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
-    "compute.googleapis.com",
-    "iap.googleapis.com",
   ])
   project            = data.google_project.wheel_of_meeting.project_id
   service            = each.value
