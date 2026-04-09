@@ -31,6 +31,12 @@ resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
   member = google_service_account.admin.member
 }
 
+resource "google_project_iam_member" "cloud_run_runtime_iam" {
+  project = data.google_project.wheel_of_meeting.project_id
+  role    = "roles/logging.logWriter"
+  member  = google_service_account.cloud_run_runtime.member
+}
+
 # serviceAccountUser scoped to the Cloud Run runtime SA only — not project-wide.
 # This allows the admin SA (used by GitHub Actions) to deploy Cloud Run services
 # that run as wheel-of-meeting-run-sa, without being able to impersonate any
