@@ -21,9 +21,6 @@ resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
     "roles/logging.logWriter",
     # run.developer (not run.admin): deploy/update services without managing IAM on them
     "roles/run.developer",
-    # cloudbuild.builds.editor: submit Cloud Build jobs (gcloud builds submit)
-    # Image push to platform AR is done by the Cloud Build SA, not this one
-    "roles/cloudbuild.builds.editor",
   ])
   project = data.google_project.wheel_of_meeting.project_id
   role    = each.value

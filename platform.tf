@@ -9,7 +9,7 @@ module "platform" {
     module.wheel_of_meeting.cloud_run_runtime_sa_email,
   ]
   writer_service_accounts = [
-    # Cloud Build SA for the wheel-of-meeting project pushes images here
-    "${module.wheel_of_meeting.wheel_of_meeting_terraform_project_number}@cloudbuild.gserviceaccount.com",
+    # Admin SA (used by GitHub Actions) pushes images directly via docker push
+    module.wheel_of_meeting.admin_service_account.email,
   ]
 }

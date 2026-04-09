@@ -27,3 +27,9 @@ resource "github_actions_secret" "gcp_cloud_run_service_account" {
   secret_name     = "CLOUD_RUN_SERVICE_ACCOUNT"
   plaintext_value = google_service_account.cloud_run_runtime.email
 }
+
+resource "github_actions_secret" "ar_repo" {
+  repository      = local.repository_name
+  secret_name     = "GCP_AR_REPO"
+  plaintext_value = "${lower(var.location)}-docker.pkg.dev/platform-${var.resource_postfix}/docker-${var.resource_postfix}/wheel-of-meeting"
+}
