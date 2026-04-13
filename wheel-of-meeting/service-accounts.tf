@@ -19,8 +19,10 @@ resource "google_service_account" "cloud_run_runtime" {
 resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
   for_each = toset([
     "roles/logging.logWriter",
-    # run.developer (not run.admin): deploy/update services without managing IAM on them
-    "roles/run.developer",
+    # run.admin required: the wheel-of-meeting Terraform manages IAM on the Cloud Run
+    # service (google_cloud_run_v2_service_iam_member.invoker), which needs
+    # run.services.setIamPolicy — only granted by run.admin, not run.developer.
+    "roles/run.admin",
   ])
   project = data.google_project.wheel_of_meeting.project_id
   role    = each.value
