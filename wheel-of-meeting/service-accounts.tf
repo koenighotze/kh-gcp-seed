@@ -23,6 +23,10 @@ resource "google_project_iam_member" "wheel_of_meeting_iam_member_project" {
     # service (google_cloud_run_v2_service_iam_member.invoker), which needs
     # run.services.setIamPolicy — only granted by run.admin, not run.developer.
     "roles/run.admin",
+    # secretmanager.secretAdmin required: the wheel-of-meeting Terraform creates and
+    # manages Secret Manager secrets (secrets.tf). secretAccessor alone is not enough —
+    # the admin SA needs secretmanager.secrets.create to provision the secret shells.
+    "roles/secretmanager.secretAdmin",
   ])
   project = data.google_project.wheel_of_meeting.project_id
   role    = each.value
