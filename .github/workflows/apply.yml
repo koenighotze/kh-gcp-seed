@@ -25,7 +25,7 @@ jobs:
   #   runs-on: ubuntu-24.04
 
   #   steps:
-  #     - uses: actions/checkout@v6
+  #     - uses: actions/checkout@v7
   #     - name: Security scan
   #       uses: aquasecurity/trivy-action@0.33.1
   #       with:
@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@v12.3094.0
@@ -52,7 +52,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Authenticating
         uses: google-github-actions/auth@v3.0.0
         with:
